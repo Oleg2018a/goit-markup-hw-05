@@ -67,6 +67,7 @@ button {
   letter-spacing: 0.02em;
 }
 .box {
+  transition-property: transition-duration, transition-timing-function;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -122,6 +123,7 @@ button {
 }
 .bottom-line {
   position: relative;
+  color: var(--hover-focus-color);
 }
 .bottom-line::after {
   position: absolute;
@@ -445,7 +447,8 @@ button {
   overflow: auto;
   /* opacity: 0; */
 }
-.work-link:hover .overlay-text {
+.work-link:hover .overlay-text,
+.work-link:focus .overlay-text {
   transform: translate(0);
   /* opacity: 1; */
 }
@@ -570,6 +573,14 @@ button {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.modal-close:hover,
+.modal-close:focus {
+  background-color: var(--hover-focus-color);
+}
+.modal-close:hover .modal-icon,
+.modal-close:focus .modal-icon {
+  fill: #ffffff;
 }
 .modal-icon {
   display: block;
